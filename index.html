@@ -1,481 +1,1578 @@
-<div class="submission-table medium-margin-left medium-margin-right margin-left-10 margin-right-10">
-    <table class="he-table align-center">
-        <tbody>
-            <tr class="heading">
-                <td>Input</td>
-                <td>Result</td>
-                <td>Time (sec)</td>
-                <td>Memory (KiB)</td>
-                <td>Score</td>
-                <td><span class="tool-tip">Your Output</span></td>
-                <td><span class="tool-tip">Correct Output</span></td>
-                <td><span class="tool-tip">Diff</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b6a33e6a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d703b9317c7bbe4cb3223bb8f5a9132dfdf133938e9c22185102517b20df3c93"
-                        target="_blank" class="link">Input #1</a><a>
+<body data-new-gr-c-s-check-loaded="14.1035.0" data-gr-ext-installed="">
+    <div id="MathJax_Message" style="display: none;"></div>
+
+
+
+    <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/base/notification_toast.13781ce68c5c.css">
+    <div class="notification-toast-container notification-top-center regular">
+        <div class="notification-errors">
+            <p id="notification-auth-error" class="error-item hidden no-margin">
+                <span class="fa fa-times less-margin-right"></span>Ensure that you are logged in and have the required
+                permissions to access the test.
+            </p>
+            <p id="notification-server-error" class="error-item hidden no-margin">
+                <span class="fa fa-times less-margin-right"></span>A server error has occurred. Please refresh the page
+                or try after some time.
+            </p>
+            <p id="notification-error" class="error-item hidden no-margin">
+                <span class="fa fa-times less-margin-right"></span>An error has occurred. Please refresh the page or try
+                after some time.
+            </p>
+            <p id="notification-custom-error" class="error-item hidden no-margin"></p>
+
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/base/notification-toast.d8eeab161f6f.js"
+        crossorigin="anonymous" defer=""></script>
+
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBHB3B9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+    <!-- Placeholder for any alert message on the site -->
+
+    <div id="alert-message-holder">
+
+
+        <!-- put a dummy message box so that it can be used when cloning
+                     and adding more -->
+
+        <div class="alert-message hidden">
+            <div class="message float-left"></div>
+            <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+            <div class="clear"></div>
+        </div>
+    </div> <!-- end alert-message-holder -->
+
+    <!-- Placeholder for any error message on the site -->
+
+    <div id="error-message-holder">
+
+
+        <!-- put a dummy message box so that it can be used when cloning
+                     and adding more -->
+        <div class="error-message hidden">
+            <div class="message float-left"></div>
+            <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+            <div class="clear"></div>
+        </div>
+    </div> <!-- end error-message-holder -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <header class="header community-header">
+        <i class="fa fa-bars mobile-menu-btn"></i>
+        <nav class="navigation">
+
+            <a href="https://www.hackerearth.com"
+                class="logo logo-h-terminal  no-underline float-left track-header-logo"></a>
+
+
+
+            <ul class="nav-bar no-padding float-left tablet-hide">
+                <!-- practice page -->
+                <li id="problems" class="nav-bar-menu "><a class="track-header-problems"
+                        href="https://www.hackerearth.com/practice/">PRACTICE</a></li>
+                <!-- challenges page -->
+                <li id="challenges" class="nav-bar-menu "><a class="track-header-challenges"
+                        href="https://www.hackerearth.com/challenges/">COMPETE</a></li>
+                <!--Jobs-->
+                <li id="jobs" class="nav-bar-menu "><a class="track-header-jobs"
+                        href="https://www.hackerearth.com/jobs/">JOBS</a></li>
+                <!--Leaderboard page-->
+                <li id="leaderboard" class="nav-bar-menu "><a class="track-header-leaderboard"
+                        href="https://www.hackerearth.com/leaderboard/contests/rated/">LEADERBOARD
+                    </a></li>
+                <!--Community lead modal (launch on click)-->
+                <li id="community-lead" class="nav-bar-menu"><a id="organize-hackathons-tab"
+                        class="track-header-organise-hack">ORGANIZE HACKATHONS
+                    </a></li>
+            </ul>
+            <ul class="nav-bar right-nav-bar no-padding float-right tablet-hide">
+
+
+                <link rel="stylesheet"
+                    href="https://static-fastly.hackerearth.com/static/search/search.e1ef7070302d.css">
+                <li id="searchbar">
+                    <div id="search-icon-container" class="float-right">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <input id="searchbar-input" class="float-left" type="text" value="" name="q" autocomplete="off"
+                        spellcheck="false" placeholder="Search developers, problems, etc" ajax1="/search/AJAX/search/"
+                        ajax2="/search/search-results/">
+                    <div id="search-dropdown"></div>
+                </li>
+
+
+
+
+                <li id="header-notif-icon" class="">
+                    <a class="track-header-notifs tool-tip notification-icon tablet-hide">
+                        <span id="notif-icon" expand="notifications-box" class="nav-bar-menu nav-menu pagelet-hover"
+                            ajax="/notifications/pagelets/new-notifications/" target="notifications-container">
+                            <i class="fa fa-bell"></i>
+
+                        </span>
                     </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.009578</td>
-                <td>2</td>
-                <td>6</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177895-f6f0e9f.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b68326ca65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=64619d7ae8edab1e0f12cc1cd18220def7defc4b66187ac5239f35b5dbff3c85"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b722ef2a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=01842d7911dc6ba323865e8bd531fc627175ae1750cadc86fb2041017e4614b9"
-                        target="_blank" class="link">Input #2</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.009136</td>
-                <td>2</td>
-                <td>6</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177896-211ceb5.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b706d4ca65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=c587a28f4d3ee67c29124a76fbef564e405843412fe7eb73d703916412fe61b5"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b7a1dc4a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1d8b1570255f267df342738ca33e97ecea3e696929c8589276e3837c7eb1ff65"
-                        target="_blank" class="link">Input #3</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049967</td>
-                <td>3944</td>
-                <td>6</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177897-4d5c053.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b78503ea65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2fc678daf2d4dba46818b79038c802fcac7dd4b6ae3bc87b968403c2eaab2836"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b8056a8a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=716ce5be7e0584bc75ca22a0e9e8eeceb8f4ce9c4f1b13fd7c76d53d73ad8fe4"
-                        target="_blank" class="link">Input #4</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.050372</td>
-                <td>3944</td>
-                <td>6</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177898-b3e46cc.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b7e93b8a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=38a559e7ddfac36fdb508c570ff2142faebda92cf8845e7207618f482d0949d0"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b876bf0a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=fbbfe300a44ad0dbcbd24d6163c2597828f9fd38b4a4133cf408abab72dc2079"
-                        target="_blank" class="link">Input #5</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.058296</td>
-                <td>3944</td>
-                <td>6</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177899-8c9e61c.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b854884a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d0af67317a740af684199a6457ff4bb7d056b6571036e48706647f3c4d2b6e0c"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b8e6216a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e99ddac6ec38d411652777f05a1a763899426ac83a1ad4974184a3d235af975a"
-                        target="_blank" class="link">Input #6</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049699</td>
-                <td>3944</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177900-0f37e3c.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b8c2d8ea65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=69c03488b458bb9c74667860e6ce2c8073193079cab1cc597d8294b4a75a39ce"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b961e48a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=c5df20383b85540e08a08e2780bdf7bb03acfbd5a5943734db2982b0a3f99423"
-                        target="_blank" class="link">Input #7</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049525</td>
-                <td>3944</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177901-2642667.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b942872a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=964d406a49cd4ff1f33d1a5615a66b0a2b37bbc0a30b7ba4f853673011d2523d"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b9dada2a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3f7569b85c084dcc7615d4f13fc40bbc8ef992b99fb81cc02223bc92180a3456"
-                        target="_blank" class="link">Input #8</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049573</td>
-                <td>3944</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177902-064c65e.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4b9b9774a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2411ec242729ccd07d034dd370b54005dc06b5c0f10c4c7bcd799500e7fee6f5"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4ba4a9e0a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=04203020fec777dbbc8bea3dac82fdb6ae6dbf291acc6a6507b3a4b1bc6c2b58"
-                        target="_blank" class="link">Input #9</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049305</td>
-                <td>3944</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177903-ac62447.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4ba2b6c6a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=aa3149cd7e68d5a444f414e5729af08d0aa9f11156c19266c1a98622f323024a"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bad6292a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=fa7e6f5160b3372f1b306c84a8d57df8cd33042ce737720dd913db8ee3724c56"
-                        target="_blank" class="link">Input #10</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049655</td>
-                <td>3944</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177904-21519f7.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bab81d4a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=7fbb078870018203d02900d3cc61a1d8aa0c071d2fa26c586fda4e27253f94db"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bb7b6aca65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=bb2184b52f4193d9cddbf084c6a9602c2e5d849570b61fed1c330244ca19764d"
-                        target="_blank" class="link">Input #11</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.057603</td>
-                <td>7676</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177905-632fce2.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bb2762ea65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=680a7619d0e8b2bd47802d2898e46b68a02b597909308191c0eaa0839fbc41a6"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bbf28b0a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=039f878fd3b8bf3fb0f9974bea0e161cbaa9a8018316f09b4c3248cfdd4dbbce"
-                        target="_blank" class="link">Input #12</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.057215</td>
-                <td>7688</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177906-207b128.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bbd4982a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2642f9ad0eb9616db5e856ddb57906b8543abde99b2f75fa1b2966dfc87d0a6a"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bc6bccea65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=7c720f15df5c8dc7f9c094a0fa87daf3bfb05577ed4541312a29774599a543b3"
-                        target="_blank" class="link">Input #13</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.04908</td>
-                <td>5932</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177907-451f9d7.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bc45ccca65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=66178ac8673421f46b7f0a7aa20c25c7ae82cc3fb705aa1746ebc1982fb897b2"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bcd2550a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=01d069042a73ab8f34074fd51a6dc9cc7c762d7fa5fb50f6833c4fc3adc00941"
-                        target="_blank" class="link">Input #14</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049507</td>
-                <td>6256</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177908-158ac7c.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bcb61caa65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b38077db124424abf8de3ac9cbf81d56c403ab19c310ff7a011d7fe219c879f2"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bd3fd62a65511e7.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=50b66ce669c7c6a68e4fcd48c65733580c5c0b74fe83e2d1538580f4208cc24a"
-                        target="_blank" class="link">Input #15</a><a>
-                    </a>
-                </td>
-                <td><span class="tool-tip result-col">
-                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
-                    </span></td>
-                <td>0.049547</td>
-                <td>6436</td>
-                <td>7</td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84041831/output-84041831-702177909-bcc9548.txt"
-                        target="_blank" class="link-tool-tip large mp-your-output-file"
-                        title="Your output for given input">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/october-easy-17/problems/4bd20b42a65511e7.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230822%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230822T182033Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=157955d0c17874c9532ca5f64dc1e378b3213a132e2bdb63379b526dc221195d"
-                        class="link tool-tip large mp-correct-output-file" target="_blank">
-                        <i class="fa fa-file-code-o"></i>
-                    </a>
-                </td>
-                <td>
-                    <span class="link tool-tip large">
-                        <i class="fa fa-file-code-o lighter"></i>
-                    </span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                    <a class="track-header-notifs tool-tip notification-icon tablet-show" href="/notifications/">
+                        <span id="notif-icon-mob" class="nav-bar-menu">Notifications
+                        </span></a>
+
+                </li>
+
+
+
+
+                <li id="user-name" class="nav-bar-menu tablet-hide"><a class="track-header-profile-box"
+                        href="https://www.hackerearth.com/@coolscp2005"><img
+                            src="https://he-s3.s3.amazonaws.com/media/avatars/coolscp2005/resized/30/aachttehvf6wfqmkczkofdqdhybjbggwgvjd7twwd7uww0oanp8s96-c"
+                            alt="coolscp2005" width="30" height="30"
+                            onerror="if(typeof handle_avatar_error=='function'){handle_avatar_error(this);}"></a></li>
+
+
+
+
+                <li id="hacker-dd-icon" expand="hacker-box" class="nav-bar-menu nav-menu"><a>
+                        <div class="caret-icon"><i class="fa fa-caret-down"></i></div>
+                    </a></li>
+
+
+
+
+                <div class="clear"></div>
+            </ul> <!-- nav-bar -->
+            <div class="clear"></div>
+
+        </nav> <!-- navigation -->
+
+        <i class="fa fa-filter challenge-filter-btn hidden"></i>
+
+    </header> <!-- header -->
+
+
+    <style>
+        #gdpr-modal {
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+    <div id="gdpr-modal" class="modal-window smaller-modal hidden">
+
+
+        <style>
+            #gdpr-modal-content {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            #gdpr-modal-content .modal-header {
+                padding: 50px 55px 35px 55px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            #gdpr-modal-content .modal-footer {
+                padding: 25px 55px 90px;
+            }
+
+            #gdpr-modal-content .modal-content {
+                padding: 0 55px 5px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            #gdpr-modal-content .modal-footer .checkbox-row {
+                font-size: 16px;
+                display: inline-flex;
+            }
+
+            #gdpr-modal-content a {
+                color: #0099ff;
+            }
+
+            #gdpr-modal-content .button.disabled {
+                background: #f5f6f6 !important;
+            }
+        </style>
+
+        <div id="gdpr-modal-content">
+
+            <div class="modal-header">HackerEarth’s Privacy Policy and Terms of Service</div>
+            <div class="modal-content">
+                We care about your data privacy. HackerEarth uses the information that you provide to contact you about
+                relevant content, products, and services. <br> <br>
+
+                Our <a href="/privacy/" target="_blank">Privacy Policy</a> and <a href="/terms-of-service/"
+                    target="_blank">Terms of Service</a> will help you understand that you are in control of your data
+                at HackerEarth.
+            </div>
+            <div class="modal-footer">
+                <div class="margin-bottom-15 regular checkbox-row">
+                    <input type="checkbox" name="gdpr-tnc">
+                    I have read and I agree.
+                </div>
+                <div class="">
+                    <input type="submit" name="submit" value="Proceed"
+                        class="button btn-blue fontawesome btn-largest disabled large" id="gdpr-submit">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="comment-share-modal" class="modal-window small-modal">
+        <div class="modal-header">
+            Comment permalink
+        </div>
+        <div class="modal-content">
+            <div class="comment-share-wrapper align-center">
+                <textarea class="comment-share-text" type="textbox" rows="4" readonly="readonly"
+                    onclick="this.select();"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="badge-win-modal-root">
+        <div class="badge-win-modal-wrapper"></div>
+    </div>
+
+    <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/badges/badges.921361c6f0b9.css">
+    <link rel="stylesheet" href="https://static-fastly.hackerearth.com/static/badges/nuskha-vendors.eae6f6be9be8.css">
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/badges/vendors.26b39691fa59.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/badges/badges.c062a4f3ef1b.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/badges/nuskha-vendors.ea2d7ac22777.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function loadBadgeWinModal() {
+            const additionalData = {
+                userId: "9401097",
+                username: "coolscp2005",
+            };
+            if (window.renderBadgeWinModal) {
+                window.renderBadgeWinModal("badge-win-modal-root", additionalData);
+            } else {
+                typeof addAlert !== "undefined" && addAlert("An error has occurred. Refresh the page or try after sometime.");
+            }
+        }
+
+        window.addEventListener("load", loadBadgeWinModal);
+    </script>
+
+
+
+
+
+
+
+
+    <!-- This is the center page which has a fixed width of 1100px -->
+
+    <div class="bl-page">
+        <div class="left">
+            <div class="heading-3">
+
+                <a href="/practice/math/combinatorics/inclusion-exclusion/practice-problems/algorithm/permutation-intersections/"
+                    class="hover-link">Permutation Intersections</a> <span class="gray-text">/</span>
+
+                <a href="/challenges/competitive/december-clash-16/algorithm/permutation-intersections/submission/84042465/"
+                    class="no-color hover-link">Submission (84042465)</a>
+                <span class="gray-text">by</span>
+                <a href="/@bipinshan659" class="no-color hover-link">Bipin Kumar (bipinshan659)</a>
+            </div>
+
+            <div id="submission-container-0a4e6814ef10419bb6d244b554a035ff"
+                class="submission-container standard-margin medium-margin-bottom">
+
+                <div class="submission-response submission-response-0a4e6814ef10419bb6d244b554a035ff"
+                    id="submission-result-0a4e6814ef10419bb6d244b554a035ff">
+                    <div id="487d337">
+
+                        <div id="submission-result-84042465" class="programming-submission" data-result="AC"
+                            data-result-detail="">
+                            <div class="submission-result submission-result-new">
+                                <div class="submission-id">
+                                    Submission ID: 84042465 / Jul 19, 2023 at 04:12 PM
+                                </div>
+
+
+
+                                <div class="result-container green-border">
+                                    <div class="result">
+                                        <span class="weight-600">RESULT:</span>
+
+                                        <i class="fa fa-check-circle green-color result-icon tool-tip"></i>
+                                        <span class="green-color submission-status" replacedata="false">Accepted</span>
+                                        <span class="float-right refer-judge-environment">
+                                            <i class="icon ui-question-mark-o link"></i>
+                                            <a href="https://www.hackerearth.com/docs/wiki/developers/judge/"
+                                                target="_blank" class="link">Refer judge environment</a>
+                                        </span>
+
+                                    </div><!-- result -->
+
+                                    <div class="result-details">
+
+
+                                        <div class="result-details-block marks inline-block">
+                                            <p class="bold">Score</p>
+                                            <p class="light">50</p>
+                                        </div><!-- marks -->
+
+
+
+                                        <div class="result-details-block time inline-block">
+                                            <p class="bold">Time (sec)</p>
+                                            <p class="light">0.52835</p>
+                                        </div><!-- time -->
+
+
+
+                                        <div class="result-details-block memory inline-block">
+                                            <p class="bold">Memory (KiB)</p>
+                                            <p class="light">14676</p>
+                                        </div><!-- memory -->
+
+
+                                        <div class="result-details-block lang inline-block">
+                                            <p class="bold">Language</p>
+                                            <p class="light">C++14</p>
+                                        </div><!-- lang -->
+                                    </div><!-- result-details -->
+                                </div><!-- result-container -->
+
+
+                                <div
+                                    class="submission-table medium-margin-left medium-margin-right margin-left-10 margin-right-10">
+                                    <table class="he-table align-center">
+                                        <tbody>
+                                            <tr class="heading">
+                                                <td>Input</td>
+                                                <td>Result</td>
+                                                <td>Time (sec)</td>
+                                                <td>Memory (KiB)</td>
+                                                <td>Score</td>
+                                                <td><span class="tool-tip">Your Output</span></td>
+                                                <td><span class="tool-tip">Correct Output</span></td>
+                                                <td><span class="tool-tip">Diff</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/december-clash-16/problems/33534104-b-input-33533b8.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230823%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230823T071133Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=afbc3764493e7fc5c56fedaa5288e534a54026aeaf21a453946c71b8eed48253"
+                                                        target="_blank" class="link">Input #1</a><a>
+                                                    </a>
+                                                </td>
+                                                <td><span class="tool-tip result-col">
+                                                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
+                                                    </span></td>
+                                                <td>0.018051</td>
+                                                <td>2</td>
+                                                <td>50</td>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84042465/output-84042465-702178825-4a834e9.txt"
+                                                        target="_blank" class="link-tool-tip large mp-your-output-file"
+                                                        title="Your output for given input">
+                                                        <i class="fa fa-file-code-o"></i>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/december-clash-16/problems/335b5d12-b-output-335b579.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230823%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230823T071133Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=48be7a9bc0c5884d2ed0e71df1be4667a4ba3540df34290537f0e5dc2b52de61"
+                                                        class="link tool-tip large mp-correct-output-file"
+                                                        target="_blank">
+                                                        <i class="fa fa-file-code-o"></i>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <span class="link tool-tip large">
+                                                        <i class="fa fa-file-code-o lighter"></i>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/december-clash-16/problems/3377f56c-b-input-3377eeb.txt.clean.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230823%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230823T071133Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=32e25b34f8070ea3fdcad06336f864ddc4d2547533e5d560cee07493d11834ff"
+                                                        target="_blank" class="link">Input #2</a><a>
+                                                    </a>
+                                                </td>
+                                                <td><span class="tool-tip result-col">
+                                                        <i class="icon ui-check-o green-color result-icon"></i> Accepted
+                                                    </span></td>
+                                                <td>0.510301</td>
+                                                <td>14676</td>
+                                                <td>50</td>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/temporary-user-data/output-files/84042465/output-84042465-702178826-d3d8673.txt"
+                                                        target="_blank" class="link-tool-tip large mp-your-output-file"
+                                                        title="Your output for given input">
+                                                        <i class="fa fa-file-code-o"></i>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="https://he-s3.s3.amazonaws.com/media/hackathon/december-clash-16/problems/339ad0b4-b-output-339acae.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA6I2ISGOYMPJGUFGY%2F20230823%2Fap-southeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230823T071133Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=eb47b8b676950ff25ad056edcf71fa18d1596726da0ea89523a7205a35015ae4"
+                                                        class="link tool-tip large mp-correct-output-file"
+                                                        target="_blank">
+                                                        <i class="fa fa-file-code-o"></i>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <span class="link tool-tip large">
+                                                        <i class="fa fa-file-code-o lighter"></i>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- end submission-table -->
+
+
+                                <div id="error-modal" class="error-modal modal-window small-modal hidden">
+
+
+
+
+                                    <div class="modal-header fancy-header align-center">
+                                        <span class="body-font large-20"> Error Log </span>
+                                    </div>
+
+                                    <div class="modal-content body-font">
+
+
+
+
+
+
+
+                                    </div>
+                                    <div class="modal-footer fancy-footer small align-center">
+
+
+                                        <a class="button btn-blue-outline medium-margin-left close-modal-window"> Close
+                                        </a>
+                                    </div>
+
+
+
+                                </div><!-- submission-table -->
+
+                                <div class="submission-result-data medium-margin">
+
+
+
+
+
+
+
+
+                                </div><!-- end submission-result-data -->
+                            </div><!-- end submission-result -->
+                        </div>
+
+                        <div id="bigpipe-json-84042465" class="hidden">
+
+                        </div>
+
+                    </div>
+                </div> <!-- submission-response -->
+
+            </div> <!-- submission-container -->
+
+            <div class="content-heading dark weight-600">Submission:</div>
+
+            <div class="submission-iframe-loader dots-loader" style="display: none;"></div>
+            <div class="submission-iframe-loader medium-margin" style="display: none;"></div>
+
+            <!-- This group gets displayed by default -->
+            <div id="submission-iframe-group" class="hidden" style="display: block;">
+                <div class="float-right">
+                    <span class="lighter-gray regular">Theme:</span>
+                    <select class="nice-select" size="1" onchange="change_theme(this.value);">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+
+                <iframe id="submission-iframe-light" class="submission-iframe less-margin"
+                    src="/submission/key/f106f867f5134a028e5faba5219e2b9a/" onload="submission_iframe_loaded()"
+                    width="100%" frameborder="0" allowtransparency="true" scrolling="yes" style="height: 2978px;">
+                </iframe>
+            </div>
+
+            <iframe id="submission-iframe-dark" class="submission-iframe less-margin hidden"
+                src="/submission/key/f106f867f5134a028e5faba5219e2b9a/?theme=dark" width="100%" frameborder="0"
+                allowtransparency="true" scrolling="yes" style="height: 2978px;">
+            </iframe>
+
+            <div class="content-heading dark weight-600">Embed Submission:</div>
+
+            <textarea id="link-text" class="regular full-width"></textarea>
+            <span class="lighter-gray regular">Theme:</span>
+            <select class="nice-select" size="1" onchange="set_embed_theme(this.value);">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <script type="text/javascript">
+                var content_length_param = '';
+                function change_theme(theme_selected) {
+                    $('.submission-iframe').hide()
+                    if (theme_selected == 'dark') {
+                        $('#submission-iframe-dark').show();
+                    }
+                    else {
+                        $('#submission-iframe-light').show();
+                    }
+                }
+                function set_embed_theme(theme_selected) {
+                    if (theme_selected != "light" && theme_selected != "dark") {
+                        theme_selected = "light"
+                    }
+
+                    var iframe_height = calculate_iframe_height();
+
+                    var src = "https://www.hackerearth.com/submission/key/f106f867f5134a028e5faba5219e2b9a/?theme=" + theme_selected;
+
+                    if (content_length_param)
+                        src = src.concat("&" + content_length_param);
+
+                    var embed_link = "<iframe src=" + src + " width='100%' height='" + iframe_height + "px' frameborder='0' allowtransparency='true' scrolling='yes'></iframe>";
+                    var input_link = $('#link-text');
+                    input_link.val(embed_link);
+                }
+                function submission_iframe_loaded() {
+                    // This is where all the JS for the iframe starts executing
+                    // Hide the loader and show the default iframe
+                    $('.submission-iframe-loader').hide();
+                    $('#submission-iframe-group').show();
+
+                    // Resize the iframe upto full height of the code
+                    resize_iframe();
+
+                    // Show the embed link for the iframe
+                    set_embed_theme();
+                }
+                function calculate_iframe_height() {
+                    var submission_iframe = $('#submission-iframe-light');
+                    var required_height = $(submission_iframe).contents().find('ol').height();
+                    return required_height + 80;
+                }
+                function resize_iframe() {
+                    var submission_iframe = $('.submission-iframe');
+                    submission_iframe.height(calculate_iframe_height());
+
+                    var actual_width = submission_iframe.contents().width();
+
+                    console.log(submission_iframe.width(), actual_width)
+                    if (submission_iframe.width() != actual_width) {
+                        submission_iframe.contents().find('pre').width(actual_width - 15);
+                        content_length_param = "content-length=" + (actual_width - 15);
+                    }
+                }
+            </script>
+
+
+            <div class="submission-id hidden">84042465</div>
+
+            <div id="submission-comments" class="pagelet-inview"
+                ajax="/comment-action/load-comments/84042465/184/with-voting/with-sort/" target="submission-comments">
+            </div>
+
+        </div> <!-- left -->
+
+        <div class="right"></div>
+
+        <div class="clear"></div>
+    </div> <!-- bl-page -->
+
+
+    <!-- include modal window for login/signup -->
+
+
+    <!-- include new auth modal-->
+
+
+    <!-- include community lead registration modal-->
+
+
+
+
+    <link rel="stylesheet"
+        href="https://static-fastly.hackerearth.com/static/community-lead-modal/community-lead-modal.ce9f7af367a1.css">
+    <link rel="stylesheet"
+        href="https://static-fastly.hackerearth.com/static/community-lead-modal/nuskha-vendors.fa31a02aad79.css">
+
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/community-lead-modal/community-lead-modal.bcbf39e7ceeb.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/community-lead-modal/vendors.ab3660198632.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/community-lead-modal/nuskha-vendors.d7a237d87c5b.js"
+        crossorigin="anonymous"></script>
+
+    <div id="community-lead-modal-root"></div>
+
+
+
+    <script>
+
+        var username = 'coolscp2005';
+
+        function loadCommunityLeadModal() {
+            if (window.renderCommunityLeadModal) {
+                window.renderCommunityLeadModal("community-lead-modal-root", username);
+            } else {
+                typeof addAlert !== "undefined" && addAlert("error");
+            }
+        }
+
+        try {
+            window.loadCommunityLeadModal();
+        } catch (e) {
+            window.addEventListener("load", loadCommunityLeadModal);
+        }
+
+    </script>
+
+
+    <!-- override this block where we do not want the footer -->
+
+
+
+
+
+
+
+
+
+    <footer class="marketing-footer footer-large">
+        <div class="fixed-container">
+            <div class="primary-footer">
+                <div class="standard-margin-bottom contact-wrapper">
+                    <div class="standard-margin-bottom">
+                        <img
+                            src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/he-footer-logo.svg">
+                    </div>
+                    <ul class="no-style">
+                        <li>+1-650-461-4192</li>
+                        <li>
+                            <a href="mailto:contact@hackerearth.com" target="_blank">
+                                contact@hackerearth.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="social-links-container no-style">
+                        <li>
+                            <a href="https://www.facebook.com/HackerEarth/" target="_blank">
+                                <img
+                                    src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/facebook-logo.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/HackerEarth?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                target="_blank">
+                                <img
+                                    src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/twitter-logo.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/hackerearth/?originalSubdomain=in"
+                                target="_blank">
+                                <img
+                                    src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/linkedin-logo.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCYU6nvKyRYnE5kiG9JXkXpA" target="_blank">
+                                <img
+                                    src="https://static-fastly.hackerearth.com/static/hackerearth/images/assessment_marketing/youtube-logo.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="standard-margin-bottom">
+                    <h3 class="footer-heading">For Developers</h3>
+                    <ul class="no-style">
+                        <li>
+                            <a href="https://www.hackerearth.com/challenges/hackathon/" target="_blank">
+                                Hackathons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/challenges" target="_blank">
+                                Challenges
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/jobs/" target="_blank">
+                                Jobs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/practice/" target="_blank">
+                                Practice
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/campus-ambassador-program/" target="_blank">
+                                Campus Ambassadors
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="standard-margin-bottom">
+                    <h3 class="footer-heading">For Businesses</h3>
+                    <ul class="no-style">
+                        <li>
+                            <a href="https://www.hackerearth.com/community-hackathons/" target="_blank">
+                                Hackathons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/recruit/" target="_blank">
+                                Assessments
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/recruit/facecode/" target="_blank">
+                                FaceCode
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.hackerearth.com/recruit/learning-and-development/" target="_blank">
+                                Learning and Development
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="standard-margin-bottom">
+                    <h3 class="footer-heading">Knowledge</h3>
+                    <ul class="no-style">
+                        <li>
+                            <a href="https://www.hackerearth.com/practice/" target="_blank">
+                                Practice
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/practice/interviews/" target="_blank">
+                                Interview Prep
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/practice/codemonk/" target="_blank">
+                                Codemonk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://engineering.hackerearth.com/" target="_blank">
+                                Engineering Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="standard-margin-bottom">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="no-style">
+                        <li>
+                            <a href="https://www.hackerearth.com/team/" target="_blank">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/companies/hackerearth/jobs/" target="_blank">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/press/" target="_blank">
+                                Press
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://help.hackerearth.com" target="_blank">
+                                Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/reach-us/" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hackerearth.com/privacy/" target="_blank">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="secondary-footer no-style">
+            <li>
+
+
+                © 2023 HackerEarth All rights reserved
+
+            </li>
+            <li>
+                <a href="https://www.hackerearth.com/terms-of-service/" target="_blank">
+                    Terms of Service
+                </a>
+            </li>
+            <li>
+                <a href="https://www.hackerearth.com/privacy/" target="_blank">
+                    Privacy Policy
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+
+
+
+    <div class="expand-box" id="recruiter-box" style="display: none;">
+        <div class="down-arrow"></div>
+        <ul class="no-margin">
+
+
+
+            <a href="/logout/?next=/submission/84042465/">
+                <li>Logout</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <div class="expand-box" id="hacker-box" style="display: none;">
+        <div class="down-arrow"></div>
+        <ul class="no-margin">
+
+            <a class="track-header-profile-box-profile" href="https://www.hackerearth.com/@coolscp2005">
+                <li>
+                    Profile (15%)
+                    <div class="profile-complete-bar-head">
+                        <span class="profile-complete-bar"></span>
+                        <span class="profile-complete-bar-done"
+                            style="width: 15%; background-color: rgb(221, 75, 57);"></span>
+                    </div>
+                </li>
+            </a>
+
+
+
+            <a class="track-header-profile-box-bookmark" href="https://www.hackerearth.com/bookmark/problems/">
+                <li>Bookmarks</li>
+            </a>
+            <a class="track-header-profile-box-settings" href="https://www.hackerearth.com/users/profile-settings/">
+                <li>Settings</li>
+            </a>
+            <hr class="hr">
+
+
+            <a class="track-header-profile-box-user-ratings tablet-hide"
+                href="https://www.hackerearth.com/leaderboard/contests/rated/">
+                <li>Ratings</li>
+            </a>
+
+            <a class="track-header-profile-box-docs" href="https://www.hackerearth.com/docs/wiki/developers/">
+                <li>Documentation</li>
+            </a>
+            <a class="track-header-profile-box-docs"
+                href="https://www.hackerearth.com/docs/wiki/developers/points-and-badges-on-hackerearth/">
+                <li>Badges</li>
+            </a>
+
+            <hr class="hr">
+
+
+
+
+
+
+
+
+
+            <a class="track-header-profile-box-logout" href="/logout/?next=/submission/84042465/">
+                <li>Logout</li>
+            </a>
+        </ul>
+    </div> <!-- hacker-box -->
+
+
+    <!-- Include notifications box -->
+
+
+
+
+    <div class="expand-box" id="notifications-box" style="display: none;">
+        <div class="down-arrow"></div>
+        <div class="notifications-title-container">
+            <div class="float-left weight-600">Notifications</div>
+            <div class="float-right">
+                <a href="#" ajax="https://www.hackerearth.com/notifications/AJAX/mark-all-read/"
+                    class="notif-mark-all-read link smaller clicky-ajax">Mark All as Read</a>
+            </div>
+            <div class="clear"></div>
+        </div> <!-- notifications-title-container -->
+
+        <div class="notifications-container nice-scrollbar" id="notifications-container" tabindex="0"
+            style="overflow: hidden; outline: none;">
+        </div> <!-- notifications-container -->
+
+        <div class="smaller caps weight-600 align-center less-margin-2 less-margin-2-bottom">
+            <a class="link" href="https://www.hackerearth.com/notifications/">View All Notifications</a>
+        </div>
+        <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr"
+            style="width: 7px; z-index: 10; background: rgb(238, 238, 238); cursor: default; position: absolute; top: 0.8px; left: -7px; height: 0px; opacity: 1; display: none;">
+            <div class="nicescroll-cursors"
+                style="position: relative; top: 0px; float: right; width: 7px; height: 0px; background-color: rgb(204, 204, 204); border: none; background-clip: padding-box; border-radius: 0px;">
+            </div>
+        </div>
+        <div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr"
+            style="height: 7px; z-index: 10; background: rgb(238, 238, 238); top: -6.2px; left: 0px; position: absolute; opacity: 1; cursor: default; display: none;">
+            <div class="nicescroll-cursors"
+                style="position: absolute; top: 0px; height: 7px; width: 0px; background-color: rgb(204, 204, 204); border: none; background-clip: padding-box; border-radius: 0px;">
+            </div>
+        </div>
+    </div> <!-- notifications-box -->
+
+
+    <!-- Load notification icon with unread count -->
+    <div id="header-notif-icon-trigger" class="load-pagelet hidden" target="header-notif-icon"
+        ajax="/notifications/pagelets/header-notif-icon-count/" show-loader="false"></div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Store any json returned for bigpipe -->
+    <div id="bigpipe-json" class="hidden">
+        {"487d337": "/response/submission/84042465/AJAX/"}
+    </div>
+
+    <!-- Store any html returned for feedback popup -->
+    <div id="user-feedback-popup" class="hidden"></div>
+
+
+    <div id="common-notification">
+    </div>
+
+
+
+
+
+
+    <div id="external-link-modal" class="modal-window very-large-modal">
+        <div class="modal-content large dark align-left">
+            <div id="external-link-content-wrapper">
+                <pre></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- All the scripts go here -->
+    <script>
+
+        var CURRENT_PATH = "https://www.hackerearth.com/submission/84042465/";
+        var HISTORY = '';
+        var DEFAULT_REAL_NUMBER_PRECISION = 2;
+        var DECIMAL_PRECISION_ERROR_TEXT = "Only {decimal_limit} decimal places allowed";
+        var SOMETHING_WENT_WRONG_ERROR_TEXT = "Something went wrong. Please try again later.";
+
+        // Make code constants available globally in JS
+        var MAP_LANG_TO_NAME = { "BASH": "Bash", "BEFUNGE": "Befunge", "C": "C", "CLOJURE": "Clojure", "CPP11": "C++11", "CPP": "C++", "CPP14": "C++14", "CPP17": "C++17", "CSHARP": "C#", "CSS": "CSS", "D": "D", "ERLANG": "Erlang", "FSHARP": "F#", "GO": "Go", "GROOVY": "Groovy", "HASKELL": "Haskell", "HTML": "HTML", "JAVA": "Java", "JAVA8": "Java 8", "JAVA14": "Java 14", "JAVASCRIPT": "JavaScript(Rhino)", "JAVASCRIPT_NODE": "JavaScript(Node.js)", "JAVASCRIPT_UI": "JavaScript", "JULIA": "Julia", "LISP": "Lisp", "LISP_SBCL": "Lisp (SBCL)", "LUA": "Lua", "LOLCODE": "LOLCODE", "MSSQL": "MSSQL", "MYSQL": "MySQL", "OBJECTIVEC": "Objective-C", "OCAML": "OCaml", "OCTAVE": "Octave", "PASCAL": "Pascal", "PERL": "Perl", "PHP": "PHP", "POSTGRESQL": "PostgreSQL", "PYTHON3": "Python 3", "PYTHON3_8": "Python 3.8", "PYTHON": "Python", "R": "R(RScript)", "RACKET": "Racket", "RUBY": "Ruby", "RUST": "Rust", "SCALA": "Scala", "SCALA_2118": "Scala 2.11.8", "SWIFT_4_1": "Swift-4.1", "SWIFT": "Swift", "TEXTFILE": "Text", "Text": "Text", "TYPESCRIPT": "TypeScript", "vp": "N/A", "VB": "Visual Basic", "WHENEVER": "Whenever", "ORACLE_DB": "Oracle_Db", "KOTLIN": "Kotlin" };
+        var MAP_NAME_TO_LANG = { "Bash": "BASH", "Befunge": "BEFUNGE", "C": "C", "Clojure": "CLOJURE", "C++11": "CPP11", "C++": "CPP", "C++14": "CPP14", "C++17": "CPP17", "C#": "CSHARP", "CSS": "CSS", "D": "D", "Erlang": "ERLANG", "F#": "FSHARP", "Go": "GO", "Groovy": "GROOVY", "Haskell": "HASKELL", "HTML": "HTML", "Java": "JAVA", "Java 8": "JAVA8", "Java 14": "JAVA14", "JavaScript(Rhino)": "JAVASCRIPT", "JavaScript(Node.js)": "JAVASCRIPT_NODE", "JavaScript": "JAVASCRIPT_UI", "Julia": "JULIA", "Lisp": "LISP", "Lisp (SBCL)": "LISP_SBCL", "Lua": "LUA", "LOLCODE": "LOLCODE", "MSSQL": "MSSQL", "MySQL": "MYSQL", "Objective-C": "OBJECTIVEC", "OCaml": "OCAML", "Octave": "OCTAVE", "Pascal": "PASCAL", "Perl": "PERL", "PHP": "PHP", "PostgreSQL": "POSTGRESQL", "Python 3": "PYTHON3", "Python 3.8": "PYTHON3_8", "Python": "PYTHON", "R(RScript)": "R", "Racket": "RACKET", "Ruby": "RUBY", "Rust": "RUST", "Scala": "SCALA", "Scala 2.11.8": "SCALA_2118", "Swift-4.1": "SWIFT_4_1", "Swift": "SWIFT", "Text": "Text", "TypeScript": "TYPESCRIPT", "N/A": "vp", "Visual Basic": "VB", "Whenever": "WHENEVER", "Oracle_Db": "ORACLE_DB", "Kotlin": "KOTLIN" };
+    </script>
+
+
+
+    <!-- alljs: static_media/js/jquery-1.7.min.patched.js static_media/js/jquery.color.js static_media/js/jquery.elastic.js static_media/js/ajaxSend.js  static_media/js/jquery.inview.js  static_media/js/tooltip/jquery.tipTip.modified.js  static_media/offline/offline.min.js  static_media/js/watermark.min.js  static_media/history.js?v=0.1/scripts/bundled/html4html5/jquery.history.js  static_media/js/jquery.nicescroll.js  static_media/simplemodal/simplemodal.js static_media/js/jquery.sticky.js static_media/js/pusher.min.js static_media/js/ifvisible.min.js static_media/feeds/feeds.js static_media/base/progress_bar.js -->
+
+
+
+
+
+
+    <script>
+        UPLOADING_TEXT = "Uploading";
+        UPLOADED_TEXT = "Uploaded";
+        SAVING_TEXT = "Saving..";
+        UPLOAD_SUCCESS_MESSAGE = "File saved successfully.";
+        UPLOAD_ERROR_MESSAGE = "An error occured while saving, please try again in sometime.";
+    </script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/alljs.27abbd8b7bcc.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/base1.0.1.f50deb1245ea.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/bigpipe/bigpipe.65dadf156b10.js"
+        crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript">
+        var CONFIRM_COMMENT_DELETE = "Are you sure, you want to delete comment?";
+        var COMMENT_NOT_DELETED = "Comment could not be deleted!";
+        var CONFORM_COMMENT_MARK_SPAM = "Are you sure, you want to mark this comment as spam?";
+        var COMMENT_NOT_MARKED_SPAM = "Comment could not be marked as spam!";
+        var ENTER_15_CHARS = "Enter at least 15 characters";
+        var JUST_X_MORE = "Just {count} more to go";
+    </script>
+    <script>
+        var MAP_MARKER_SIGNUP_IMAGE = 'https://static-fastly.hackerearth.com/static/metrics/map-marker.png';
+        var MAP_MARKER_LOGIN_IMAGE = 'https://static-fastly.hackerearth.com/static/metrics/map-marker-login.png';
+        var AJAX_URL = '';
+
+        // Used in search
+        var is_user_logged_in = true;
+    </script>
+
+    <script>
+        // firestore credentials
+        var firebaseConfig = {
+            apiKey: 'AIzaSyD7oH2r4iyvysFx47-IVwrzdwIuw7Ici90',
+            authDomain: 'he-production.firebaseapp.com',
+            databaseURL: 'https://he-production.firebaseio.com',
+            projectId: 'he-production',
+            storageBucket: 'he-production.appspot.com',
+            messagingSenderId: '100736274227',
+            appId: '1:100736274227:web:fdd60d6929555af4d3b846'
+        };
+        window.firebaseConfig = firebaseConfig;
+    </script>
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/js/firebase/firebase-app.a75f50850a09.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/js/firebase/firebase-firestore.ac7f12977426.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/realtime/firestore_realtime.551dabc1780c.js"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/history.9f9bce34e5c7.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/commentUtils.dadb11872038.js"
+        crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/offline/offline.min.7ce195ae7071.js"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" async=""
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_SVG"></script>
+
+
+    <script type="text/x-mathjax-config;executed=true">
+        var options = {
+          messageStyle: "none",
+          jax: ["input/TeX", "output/SVG", "output/HTML-CSS"],
+          tex2jax: {
+            inlineMath: [['$$','$$'], ['\\(', '\\)']],
+            displayMath: [['$$$', '$$$'], ['\\[', '\\]']],
+            preview: "none"
+          },
+          SVG: {
+            useGlobalCache: false
+          }
+        };
+    
+        // modify the options only in case of assessments, since for proxima-nova mathjax renders very small
+        // text in chrome
+        if (window.isProximaNova) {
+          options = {
+            messageStyle: "none",
+            jax: ["input/TeX", "output/SVG", "output/HTML-CSS"],
+            tex2jax: {
+              inlineMath: [['$$','$$'], ['\\(', '\\)']],
+              displayMath: [['$$$', '$$$'], ['\\[', '\\]']],
+              preview: "none"
+            },
+            SVG: {
+              useGlobalCache: false,
+              scale: MathJax.Hub.Browser.isChrome ? 175 : 100,
+              minScaleAdjust: 100
+            },
+            "HTML-CSS": {
+              minScaleAdjust: 100
+            },
+            "CommonHTML": {
+              minScaleAdjust: 100
+            }
+          }
+        }
+    
+        MathJax.Hub.Config(options);
+    </script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/mathjax.4249b2f93e54.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            if (window.MathJax) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            }
+        });
+    </script>
+
+    <script>
+        Offline.options = {
+            interceptRequests: false,
+            requests: false,
+        };
+    </script>
+
+
+
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/base/lazy_load_image.f39cff1dd405.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var profile_completeness_percentage = 15;
+    </script>
+
+
+    <script>
+        // Used in search
+        var is_user_logged_in = true;
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#header-notif-icon-trigger').click();
+
+
+
+
+
+
+
+
+            // show kone ge widget if not visited
+
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var m_links = {};
+            var m_elements = {
+                '#modal-login-form input[type=submit]': 'Modal Email Login',
+                '#modal-signup-form input[type=submit]': 'Modal Email Signup',
+                '.modal-social-login .btn-facebook': 'Modal Facebook Login',
+                '.modal-social-login .btn-google': 'Modal Google Login',
+                '.modal-social-signup .btn-facebook': 'Modal Facebook Signup',
+                '.modal-social-signup .btn-google': 'Modal Google Signup',
+                '.top-banner .login-banner a': 'Signup after banner click',
+            };
+
+            for (var key in m_elements) {
+                $(key).live('click', { 'key': key }, function (e) {
+                    var key = e.data.key;
+                    mixpanel.track('Click', { 'name': m_elements[key] });
+                });
+            }
+            for (var key in m_links) {
+                mixpanel.track_links(key, 'Click', { 'name': m_links[key] });
+            }
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/search/search.1.0.f3e89277dbfc.js"
+        crossorigin="anonymous" defer=""></script>
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/base/gdpr-modal.024b6041f5dc.js"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/detect_timezone.12f6ba68823f.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static-fastly.hackerearth.com/static/js/mapped_tz.b92bd2377713.js"
+        crossorigin="anonymous"></script>
+    <script>
+
+        function setTimezoneCookie(detected_user_tz) {
+            /* Sets the detected user timezone as a cookie in the browser.
+               If someone changes it or removes it, a sanity check is
+               performed and the cookie is reset.
+ 
+               This cookie is set for ready availability of user timezone
+               in the backend.
+            */
+
+            const USER_TIMEZONE_COOKIE = 'user_tz';
+            // Try to get the existing user timezone cookie stored
+            // in the browser.
+            user_tz = readCookie(USER_TIMEZONE_COOKIE);
+
+            // Flag to determine whether a new cookie has to be created.
+            create_cookie = false;
+
+            if (user_tz) {
+                if (user_tz !== detected_user_tz) {
+                    // If someone has changed the cookie in some way, we
+                    // set a new cookie.
+                    eraseCookie(USER_TIMEZONE_COOKIE);
+                    create_cookie = true;
+                }
+            } else {
+                create_cookie = true;
+            }
+
+            // Create a new cookie if create_cookie flag is set.
+            createCookie(USER_TIMEZONE_COOKIE, detected_user_tz, 1);
+
+        }
+        $(document).ready(function () {
+            var timezone = '';
+            if (Intl && Intl.DateTimeFormat) {
+                timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                // Map timezone name to a name that is familiar to our backend
+                if (mapped_tz && mapped_tz[timezone]) {
+                    timezone = mapped_tz[timezone]
+                }
+            }
+            if (!timezone) {
+                timezone = jstz.determine_timezone();
+                timezone = timezone.name();
+            }
+            if (!timezone) {
+                // could not detect timezone, setting it to GMT timezone
+                timezone = 'Africa/Abidjan'
+            }
+            // Set as a cookie in browser for easy access in backend.
+            setTimezoneCookie(timezone);
+
+            // Set as a js variable for easy access across frontend.
+            USER_TIMEZONE = timezone
+
+
+
+
+
+
+
+
+
+
+
+
+            var profile_timezone = "Asia/Ho_Chi_Minh";
+            if (timezone !== profile_timezone) {
+                $.ajax({
+                    type: "POST",
+                    url: "/users/AJAX/set-timezone/",
+                    data: {
+                        'timezone': timezone,
+                    },
+                });
+            }
+
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //mixpanel delegate links custom method
+            mixpanel.delegate_links = function (parent, selector, event_name, properties) {
+                properties = properties || {};
+                parent = parent || document.body;
+                parent = $(parent);
+                parent.on('click', selector, function (event) {
+                    var new_tab = event.which === 2 || event.metaKey || event.target.target === '_blank' || this.target === '_blank';
+                    properties.url = event.target.href || this.href;
+                    function callback() {
+                        if (new_tab) {
+                            return;
+                        }
+                        window.location = properties.url;
+                    }
+                    if (!new_tab) {
+                        event.preventDefault();
+                        setTimeout(callback, 300);
+                    }
+                    mixpanel.track(event_name, properties, callback);
+                });
+            };
+        });
+
+    </script>
+
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/social_share/facebook.397e66b669e7.js"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- mixpanel analytics start -->
+    <script type="text/javascript">(function (e, a) { if (!a.__SV) { var b = window; try { var c, l, i, j = b.location, g = j.hash; c = function (a, b) { return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null }; g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search))) } catch (m) { } var k, h; window.mixpanel = a; a._i = []; a.init = function (b, c, f) { function e(b, a) { var c = a.split("."); 2 == c.length && (b = b[c[0]], a = c[1]); b[a] = function () { b.push([a].concat(Array.prototype.slice.call(arguments, 0))) } } var d = a; "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel"; d.people = d.people || []; d.toString = function (b) { var a = "mixpanel"; "mixpanel" !== f && (a += "." + f); b || (a += " (stub)"); return a }; d.people.toString = function () { return d.toString(1) + ".people (stub)" }; k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "); for (h = 0; h < k.length; h++)e(d, k[h]); a._i.push([b, c, f]) }; a.__SV = 1.2; b = e.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; c = e.getElementsByTagName("script")[0]; c.parentNode.insertBefore(b, c) } })(document, window.mixpanel || []); mixpanel.init("4c30b8635363027dfb780d5a61785112");
+    </script>
+    <!-- mixpanel analytics end -->
+    <script type="text/javascript">
+
+
+        mixpanel.register({
+            "url_path": "/submission/84042465/",
+            "username": "coolscp2005",
+            "email": "coolscp2005@gmail.com",
+            "date_of_joining": "Aug 20, 2023 08:35 AM",
+            "user_bucket": "62"
+        });
+
+
+
+    </script>
+
+
+
+
+    <div id="fb-root" class=" fb_reset">
+        <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div></div>
+        </div>
+    </div>
+    <script>
+        <!-- facebook button -->
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    < !--twitter button-- >
+            !function (d, s, id) {
+                var
+                js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); }
+            }(document, "script", "twitter-wjs");
+
+    < !--google + button-- >
+            (function () {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+    </script>
+
+
+
+
+
+
+    <link rel="stylesheet"
+        href="https://static-fastly.hackerearth.com/static/cookie_consent/cookiebar.ffe531fab344.css">
+
+    <script type="text/javascript"
+        src="https://static-fastly.hackerearth.com/static/cookie_consent/cookiebar.70181766db90.js"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+    <!-- Hackerearth Hubspot Chat Widget -->
+
+
+
+
+    <link rel="stylesheet"
+        href="https://static-fastly.hackerearth.com/static/base/hubspot-chat-widget.3d8752b3cf0b.css">
+
+    <div class="support-widget-wrapper">
+        <div class="ripple-loader">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <div id="hs-launch-button" class="customer-support-icon">
+                <p>?</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function hubspotChatWidget() {
+            function loadHubspotScripts() {
+                const s = document.createElement('script');
+                s.src = "//js-na1.hs-scripts.com/2586902.js";
+                s.id = "hs-script-loader";
+                s.type = "text/javascript";
+                s.async = true;
+                s.defer = true;
+                document.getElementsByTagName("head")[0].appendChild(s);
+            }
+
+            function setHubspotConversationSettings() {
+                window.hsConversationsSettings = {
+                    loadImmediately: false,
+                    inlineEmbedSelector: '#hs-launch-button',
+                    enableWidgetCookieBanner: true,
+                    disableAttachment: false,
+                };
+            }
+
+            function onConversationsAPIReady() {
+                const status = window.HubSpotConversations.widget.status();
+                if (status.loaded) {
+                    if (window.isWidgetOpen) {
+                        window.isWidgetOpen = false;
+                        window.HubSpotConversations.widget.remove();
+                    } else {
+                        window.isWidgetOpen = true;
+                        window.HubSpotConversations.widget.load({ widgetOpen: true });
+                    }
+                } else {
+                    window.isWidgetOpen = true;
+                    window.HubSpotConversations.widget.load({ widgetOpen: true });
+                }
+            }
+
+            function activateHubspotWidget() {
+                if (window.HubSpotConversations) {
+                    onConversationsAPIReady();
+                } else {
+                    $('.ripple-loader').css('display', 'block');
+                    $('.support-section').css('display', 'none');
+                    loadHubspotScripts();
+                    window.hsConversationsOnReady = [onConversationsAPIReady, () => {
+                        $('.ripple-loader').css('display', '');
+                        $('.support-section').css('display', '');
+                    }];
+                }
+            }
+
+            $(document).ready(function () {
+                setHubspotConversationSettings();
+                $(".customer-support-icon").on("click", function (e) {
+                    e.stopPropagation();
+                    activateHubspotWidget();
+                });
+            });
+        }
+        try {
+            hubspotChatWidget();
+        } catch (exception) {
+            console.error(exception)
+        }
+    </script>
+
+
+
+    <div id="tiptip_holder" style="max-width: 200px; display: none; margin: 282px 0px 0px 785px;" class="tip_top">
+        <div id="tiptip_arrow" style="margin-left: 94px; margin-top: 41px;">
+            <div id="tiptip_arrow_inner"></div>
+        </div>
+        <div id="tiptip_content">Difference between your output and correct output</div>
+    </div>
+    <div class="offline-ui offline-ui-up">
+        <div class="offline-ui-content"></div><a href="" class="offline-ui-retry"></a>
+    </div>
+    <div class="offline-ui offline-ui-up">
+        <div class="offline-ui-content"></div><a href="" class="offline-ui-retry"></a>
+    </div>
+    <script type="text/javascript"
+        id="">(function (c, d, f, g, e) { c[e] = c[e] || []; var h = function () { var b = { ti: "25055884" }; b.q = c[e]; c[e] = new UET(b); c[e].push("pageLoad") }; var a = d.createElement(f); a.src = g; a.async = 1; a.onload = a.onreadystatechange = function () { var b = this.readyState; b && "loaded" !== b && "complete" !== b || (h(), a.onload = a.onreadystatechange = null) }; d = d.getElementsByTagName(f)[0]; d.parentNode.insertBefore(a, d) })(window, document, "script", "//bat.bing.com/bat.js", "uetq");</script>
+    <script type="text/javascript"
+        id="">(function () { var a = document.createElement("script"); a.type = "text/javascript"; a.async = !0; a.referrerPolicy = "unsafe-url"; a.src = "https://ws.zoominfo.com/pixel/610163611d783f001520a7b3"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b) })();</script>
+    <script type="text/javascript"
+        id="">(function (d, e, f, b, c, a) { c = ""; b = "https://tracking.g2crowd.com/attribution_tracking/conversions/" + d + ".js?p\x3d" + encodeURI(e) + "\x26e\x3d" + c; a = document.createElement("script"); a.type = "application/javascript"; a.async = !0; a.src = b; f.getElementsByTagName("head")[0].appendChild(a) })("2237", document.location.href, document);</script>
+    <div>
+        <div class="grecaptcha-badge" data-style="bottomright"
+            style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+            <div class="grecaptcha-logo"><iframe title="reCAPTCHA"
+                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeyqcIZAAAAAOcy_5WJORJsuu9zmbZZxIRp4-em&amp;co=aHR0cHM6Ly93d3cuaGFja2VyZWFydGguY29tOjQ0Mw..&amp;hl=en&amp;v=x19joXI_IeQnFJ7YnfDapSZq&amp;size=invisible&amp;cb=xkmjpff6hp19"
+                    width="256" height="60" role="presentation" name="a-kil2b3dsa8pc" frameborder="0" scrolling="no"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
+            </div>
+            <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response"
+                class="g-recaptcha-response"
+                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+        </div><iframe style="display: none;"></iframe>
+    </div><iframe scrolling="no" frameborder="0" allowtransparency="true"
+        src="https://platform.twitter.com/widgets/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html?origin=https%3A%2F%2Fwww.hackerearth.com"
+        title="Twitter settings iframe" style="display: none;"></iframe>
+    <div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon530824319870"><img
+            style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon265247670157" width="0"
+            height="0" alt=""
+            src="https://bat.bing.com/action/0?ti=25055884&amp;Ver=2&amp;mid=2d6a44e6-9f65-4310-b454-e305bbba8168&amp;sid=17be33c0410c11ee8ff7874c25b4fa73&amp;vid=f75cbc303f3411ee8ac09b97944fa7db&amp;vids=0&amp;msclkid=N&amp;uach=pv%3D15.0.0&amp;pi=918639831&amp;lg=en-US&amp;sw=1536&amp;sh=864&amp;sc=24&amp;tl=Submission%20(84042465)%20for%20Permutation%20Intersections%20%7C%20HackerEarth&amp;p=https%3A%2F%2Fwww.hackerearth.com%2Fsubmission%2F84042465%2F&amp;r=https%3A%2F%2Fwww.hackerearth.com%2Fpractice%2Fmath%2Fcombinatorics%2Finclusion-exclusion%2Fpractice-problems%2Falgorithm%2Fpermutation-intersections%2Fsubmissions%2F&amp;lt=429&amp;evt=pageLoad&amp;sv=1&amp;rn=790265">
+    </div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"
+        style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"
+        title="Twitter analytics iframe"></iframe>
+</body>

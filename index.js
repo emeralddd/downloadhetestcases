@@ -1,13 +1,18 @@
-const { readFileSync, writeFileSync } = require("fs");
+const { readFileSync, writeFileSync, rmSync, mkdirSync } = require("fs");
 const request = require("request");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+
+rmSync('./testcases', { recursive: true, force: true });
+mkdirSync('./testcases');
 
 const htmlFile = readFileSync('./index.html', 'utf-8');
 
 const dom = new JSDOM(htmlFile);
 
-const testcases = dom.window.document.querySelectorAll("a");
+const table = dom.window.document.getElementsByClassName("submission-table")[0];
+
+const testcases = table.querySelectorAll("a");
 
 const convert = (i) => {
     const digits = 3;
